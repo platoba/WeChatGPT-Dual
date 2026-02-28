@@ -1,5 +1,59 @@
 # Changelog
 
+## v5.0.0 (2026-02-28)
+
+### 🔧 Bug Fix
+- Fixed FTS5 rebuild_index() corruption on external content tables (16 test failures → 0)
+- Use FTS5 built-in 'rebuild' command instead of manual DELETE+INSERT
+
+### 📱 Telegram Handler Module (`telegram/handler.py`)
+- Modular TelegramHandler with command/text/callback/media routing
+- InlineKeyboardBuilder: fluent API for inline keyboard construction
+- MessageFormatter: Markdown V2 + HTML escape, bold/italic/code/pre/link helpers
+- Message chunking for 4096-char limit (smart split at newline/space)
+- Group chat support: mention detection, reply-only mode, @mention stripping
+- Per-user rate limiting (token bucket algorithm)
+- Media message handler (photo/document/voice/video/audio)
+- Typing action indicator
+- TelegramUser + CallbackQuery data models
+
+### 💾 Response Cache Service (`services/response_cache.py`)
+- SQLite-backed cache with configurable TTL
+- Exact hash match + cosine word-overlap similarity fallback
+- Cache hit/miss/eviction statistics (daily aggregation)
+- Per-user cache invalidation
+- Auto-eviction when over max_entries (LRU by hit count)
+- Query normalization (case-insensitive, trim whitespace)
+- Tokens-saved tracking for cost analysis
+
+### 📊 Usage Quota Service (`services/usage_quota.py`)
+- Per-user daily/monthly token quotas with automatic period reset
+- 4-tier system: Free(1K/day) → Basic(10K) → Premium(100K) → Unlimited
+- Quota check before API call + consumption recording
+- Admin bypass capability
+- Usage history with engine/action tracking
+- Top users leaderboard
+- Formatted status message (Chinese UI)
+
+### 💿 Backup Service (`services/backup.py`)
+- Export conversations to JSON, Markdown, HTML formats
+- Per-user and per-channel filtering
+- Date range filtering (since/until timestamps)
+- Restore from JSON backup with overwrite option
+- Backup manifest with checksums and metadata
+- HTML export with XSS-safe escaping and styled layout
+- Markdown export with date grouping and role emojis
+- List available backups in directory
+
+### 📈 Tests
+- From 451 → 530 tests (+79 new tests, 4 new test files)
+- All 530 tests passing (was 435/451 before, now 530/530)
+- test_telegram_handler.py (25 tests)
+- test_response_cache.py (18 tests)
+- test_usage_quota.py (17 tests)
+- test_backup.py (15 tests)
+- Fixed 16 conversation_search test errors
+
 ## v4.0.0 (2026-02-28)
 
 ### 📬 Async Message Queue

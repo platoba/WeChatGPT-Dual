@@ -165,14 +165,10 @@ class ConversationSearch:
             return True
 
     def rebuild_index(self):
-        """Rebuild the FTS index from scratch"""
+        """Rebuild the FTS index from scratch using FTS5 rebuild command"""
         with self._conn() as conn:
-            # Clear and repopulate
-            conn.execute("DELETE FROM messages_fts")
-            conn.execute(
-                """INSERT INTO messages_fts(rowid, user_id, role, content, channel)
-                   SELECT id, user_id, role, content, channel FROM messages"""
-            )
+            # Use FTS5's built-in rebuild command (safe for external content tables)
+            conn.execute("INSERT INTO messages_fts(messages_fts) VALUES('rebuild')")
             conn.execute(
                 "INSERT OR REPLACE INTO search_index_meta (key, value) VALUES (?, ?)",
                 ("last_rebuild", str(time.time())),
