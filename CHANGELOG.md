@@ -1,35 +1,57 @@
 # Changelog
 
-## [3.0.0] - 2026-02-28
+## v3.0.0 (2026-02-28)
 
-### Added
-- **Webhook API** (FastAPI): `/webhook/wechat` + `/api/chat` + `/health` + `/stats` + engine management endpoints
-- **Database layer** (SQLite): Message logging, daily usage tracking, user management (block/unblock)
-- **Test suite**: 85+ tests across 10 test files covering all modules
-- **Docker Compose**: Bot + Webhook API + Redis (3-service stack)
-- **CI/CD**: GitHub Actions with lint + test + coverage + Docker build (Python 3.10-3.13)
-- **pyproject.toml**: Proper Python packaging with optional deps groups
-- **Makefile**: 12 targets (install, dev, test, coverage, lint, run, webhook, docker, up, down, logs, clean)
-- **.env.example**: All 25+ environment variables documented
+### 🔌 Plugin System
+- Hot-loadable plugin architecture (`plugins/base.py`, `plugins/loader.py`)
+- Plugin chain with priority-based dispatch
+- Built-in plugins: Weather (`/weather`), Translate (`/tr`), Image Generation (`/img`)
+- Dynamic load/unload/reload from directory
+- Command routing to plugins
 
-### Improved
-- Full Dockerfile with health check
-- Documentation with API reference, deployment guide, architecture diagram
+### 🛡️ Rate Limiting
+- Token bucket rate limiter (`middleware/`)
+- Per-user + global RPM limits
+- Whitelist bypass for VIP users
+- Auto cleanup of inactive buckets
 
-## [2.0.0] - 2026-02-27
+### 📤 Conversation Export
+- Export chat history in JSON/Markdown/CSV (`services/`)
+- Configurable system message inclusion
+- `/export` command support
 
-### Added
-- Dual AI engine architecture (OpenAI + Claude)
-- Automatic failover with rate limit detection
-- Context manager with auto-summarization
-- Knowledge base with TF-IDF RAG retrieval
-- WeChat webhook handler with group @mention support
-- 8 management commands (/status /switch /clear /usage /model /role /kb /help)
-- Document loader (TXT, MD, JSON, CSV)
-- 18 modular source files
+### 🏥 Health Monitoring
+- System health checker (`services/health.py`)
+- Engine connectivity, memory, runtime checks
+- Summary and detailed health endpoints
 
-## [1.0.0] - 2026-02-27
+### 🎬 Streaming Support
+- SSE streaming response mixin (`engines/streaming.py`)
+- Chunked delivery with SSE format output
+- Stream collection utility
 
-### Added
-- Initial release
-- Basic Telegram bot with single AI engine
+### 🖥️ Admin Dashboard
+- FastAPI admin panel (`admin/`)
+- HTML dashboard with engine stats, plugin management
+- JWT/token authentication
+- Plugin toggle/reload API endpoints
+- REST API: `/admin/api/status`, `/admin/api/health`
+
+### 📊 Testing
+- 233 total tests (73 new)
+- New test suites: plugins, rate_limit, export, health, streaming, admin
+
+---
+
+## v2.0.0 (2026-02-27)
+
+### Features
+- Dual engine architecture (OpenAI + Claude)
+- Automatic failover with retry
+- Context management with auto-summarization
+- TF-IDF RAG knowledge base
+- WeChat webhook integration
+- FastAPI REST API
+- Docker Compose (3-service stack)
+- CI/CD with GitHub Actions
+- 160 tests
