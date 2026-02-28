@@ -1,5 +1,49 @@
 # Changelog
 
+## v6.0.0 (2026-03-01)
+
+### 💬 User Feedback Service (`services/feedback_service.py`)
+- Thumbs up/down rating with comment and metadata
+- 1-5 star ratings with per-message tracking
+- Correction submissions (user provides better answer for fine-tuning)
+- Quality metrics aggregation: satisfaction rate, avg rating, model scores
+- Per-model quality comparison dashboard
+- Common issue detection from negative feedback
+- Improvement suggestions engine (auto-analyze and recommend)
+- Export: JSON + CSV with model/time filters
+- SQLite persistence with indexed queries
+
+### 🔧 Function Calling Registry (`services/function_registry.py`)
+- Register custom functions with JSON Schema parameter definitions
+- Auto-generate OpenAI function calling schema
+- Auto-generate Claude tool_use schema
+- Function dispatch with parameter validation (type checking + enum)
+- Async function support (auto-detect coroutines)
+- Function categories and permission-based access control
+- Per-function rate limiting (token bucket, per-minute)
+- Execution logging and metrics (call count, latency, success rate)
+- OpenAI tool_call dispatch: parse + validate + execute + format response
+- Claude tool_use dispatch: parse + validate + execute + format result
+- Built-in functions: get_current_time, calculator, string_tools, json_format
+- Enable/disable individual functions at runtime
+
+### 🧵 Conversation Threading (`services/conversation_threading.py`)
+- Create conversation threads with topic branching
+- Thread-scoped context isolation (system prompt + summary + variables)
+- Thread state management: active → paused → archived/closed
+- Add messages to threads with role tracking
+- Thread search by title/topic (case-insensitive)
+- Child thread support (branch from parent)
+- Thread merge: combine related threads (move messages + archive source)
+- Pin/unpin messages within thread context
+- Thread tagging, labeling, and title updates
+- Thread statistics: per-conversation, per-user, state breakdown
+- SQLite persistence with full indexing
+
+### 🧪 Tests
+- 146 new tests (3 test files): feedback_service (56) + function_registry (55) + conversation_threading (35)
+- Total: 1347 tests, all passing
+
 ## v5.0.0 (2026-02-28)
 
 ### 🔧 Bug Fix
