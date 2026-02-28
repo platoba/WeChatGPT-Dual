@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "wechatgpt-dual"
-version = "3.0.0"
+version = "4.0.0"
 description = "Dual-engine AI chatbot — Telegram + WeChat with auto failover, RAG knowledge base, and webhook API"
 readme = "README.md"
 license = {text = "MIT"}

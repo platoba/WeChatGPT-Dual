@@ -1,5 +1,47 @@
 # Changelog
 
+## v4.0.0 (2026-02-28)
+
+### 📬 Async Message Queue
+- Priority-based message queue (`services/message_queue.py`)
+- 5 priority levels: CRITICAL > HIGH > NORMAL > LOW > BULK
+- Automatic retry with exponential backoff
+- Dead Letter Queue (DLQ) with SQLite persistence
+- Configurable max workers for concurrent processing
+- Back-pressure protection (queue capacity limit)
+- DLQ replay & purge operations
+
+### 🛡️ Auto Moderation Engine
+- Content filter with blacklist words + regex patterns (`services/auto_moderation.py`)
+- 6 built-in spam detection patterns (short links, TG invites, ads)
+- Flood detection (rate + duplicate message hashing)
+- Progressive enforcement: ALLOW → WARN → BLOCK → MUTE
+- Auto-mute after configurable violation threshold
+- Per-user moderation state tracking
+- Admin whitelist bypass
+
+### 🌐 Multi-language i18n
+- 4-language support: zh/en/ja/ko (`services/i18n.py`)
+- 35 translation keys per language (UI messages, errors, commands)
+- Automatic language detection (CJK/Hangul/Latin analysis)
+- User language preference persistence
+- Variable interpolation with `{name}` syntax
+- Fallback chain: target → locale fallback → English → key
+- Custom translation loading from JSON files
+
+### 📊 Analytics Dashboard
+- Real-time metrics collector (`services/analytics_dashboard.py`)
+- Daily reports: messages, tokens, users, latency, errors
+- User profiling: engagement score, session analysis, active hours
+- Hour×Day interaction heatmap
+- User retention calculation (Day 1/3/7)
+- Channel & engine usage breakdown
+- Report export: Text / JSON / CSV
+
+### 📈 Test Coverage
+- 132 new tests (message_queue: 32, auto_moderation: 42, i18n: 32, analytics: 26)
+- Total: 319 → 451 tests
+
 ## v3.0.0 (2026-02-28)
 
 ### 🔌 Plugin System
