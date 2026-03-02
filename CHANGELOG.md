@@ -1,5 +1,33 @@
 # Changelog
 
+## [2.1.0] - 2026-03-02
+
+### Added
+- **Multimodal Support**: GPT-4V image understanding + DALL-E 3 generation
+  - Auto-analyze photos sent to bot
+  - `/generate` command for image creation
+  - `/transform` command for style transfer
+  - REST API endpoints for programmatic access
+- New service: `services/multimodal.py`
+- Telegram handlers: `telegram/multimodal_handler.py`
+- Comprehensive test suite: `tests/test_multimodal.py`
+
+### Features
+- Image understanding with custom prompts
+- High-quality image generation (1024x1024, 1792x1024, 1024x1792)
+- Image-to-image transformation pipeline
+- Token usage tracking for vision API
+- Error handling and logging
+
+### API
+- `POST /api/multimodal/understand` - Analyze images
+- `POST /api/multimodal/generate` - Create images
+- `POST /api/multimodal/transform` - Transform image styles
+
+---
+
+# Changelog
+
 ## v6.0.0 (2026-03-01)
 
 ### 💬 User Feedback Service (`services/feedback_service.py`)

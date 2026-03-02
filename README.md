@@ -180,3 +180,94 @@ make fix
 ## License
 
 MIT
+
+## v2.1.0 - Multimodal Support 🎨
+
+### New Features
+
+**Image Understanding (GPT-4V)**
+- Send any photo to the bot → automatic analysis
+- Add caption to ask specific questions
+- Example: Send a photo with caption "What breed is this dog?"
+
+**Image Generation (DALL-E 3)**
+```
+/generate a cyberpunk cat wearing sunglasses
+```
+- High-quality 1024x1024 images
+- Automatic prompt enhancement
+- Multiple size/quality options
+
+**Image Transformation**
+```
+[Reply to a photo]
+/transform make it look like a watercolor painting
+```
+- Understand original image
+- Generate new version with style transfer
+- Preserves key elements while applying transformation
+
+### API Endpoints
+
+```python
+# Image understanding
+POST /api/multimodal/understand
+{
+  "image_base64": "...",
+  "prompt": "What's in this image?",
+  "detail": "auto"  # low | high | auto
+}
+
+# Image generation
+POST /api/multimodal/generate
+{
+  "prompt": "a futuristic city",
+  "size": "1024x1024",
+  "quality": "standard",  # standard | hd
+  "style": "vivid"  # vivid | natural
+}
+
+# Image transformation
+POST /api/multimodal/transform
+{
+  "image_base64": "...",
+  "transformation_prompt": "make it cyberpunk style"
+}
+```
+
+### Configuration
+
+Add to `.env`:
+```bash
+# Multimodal settings
+VISION_MODEL=gpt-4-vision-preview
+DALLE_MODEL=dall-e-3
+MULTIMODAL_ENABLED=true
+```
+
+### Cost Considerations
+
+| Feature | Model | Cost (approx) |
+|---------|-------|---------------|
+| Image Understanding | GPT-4V | $0.01-0.03 per image |
+| Image Generation | DALL-E 3 | $0.04 per image (standard) |
+| HD Generation | DALL-E 3 | $0.08 per image |
+
+### Examples
+
+**Analyze a meme:**
+```
+[Send meme image]
+Bot: "This is a 'Distracted Boyfriend' meme showing..."
+```
+
+**Generate product mockup:**
+```
+/generate a minimalist coffee mug with geometric patterns, studio lighting
+```
+
+**Transform photo style:**
+```
+[Send landscape photo]
+/transform convert to anime style with vibrant colors
+```
