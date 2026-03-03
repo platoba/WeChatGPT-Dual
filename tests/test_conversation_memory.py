@@ -1,10 +1,9 @@
 """Tests for conversation_memory module."""
 import os
 import time
-import json
 import pytest
 import tempfile
-from services.conversation_memory import ConversationMemory, Memory, SearchResult, CATEGORIES
+from services.conversation_memory import ConversationMemory
 
 
 @pytest.fixture

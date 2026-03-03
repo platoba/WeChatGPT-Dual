@@ -12,7 +12,6 @@ A/B 测试服务 - Prompt变体实验 + 用户反馈 + 自动评估 + 统计显�
 - SQLite持久化
 """
 
-import os
 import math
 import time
 import json
@@ -863,7 +862,7 @@ class ABTestService:
 
         exp_info = analysis["experiment"]
         lines = [
-            f"═══ A/B Test Report ═══",
+            "═══ A/B Test Report ═══",
             f"实验: {exp_info['name']} ({exp_info['id']})",
             f"状态: {exp_info['status']}",
             "",

@@ -1,12 +1,11 @@
 """Tests for services/backup.py"""
 
 import os
-import json
 import time
 import pytest
 import sqlite3
 import tempfile
-from services.backup import BackupService, BackupManifest
+from services.backup import BackupService
 
 
 @pytest.fixture

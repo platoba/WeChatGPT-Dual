@@ -1,13 +1,11 @@
 """Tests for Webhook Security Service"""
 
 import time
-import pytest
 from services.webhook_security import (
     WebhookSecurity,
     SecurityConfig,
     NonceStore,
     RateLimitTracker,
-    SecurityEvent,
 )
 
 

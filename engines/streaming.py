@@ -2,13 +2,12 @@
 流式响应支持 - SSE streaming for engines
 """
 
-import time
 import json
 import logging
-from typing import Generator, Dict, List, Optional
+from typing import Generator, Dict, List
 from dataclasses import dataclass
 
-from engines.base import BaseEngine, ChatResponse, EngineError
+from engines.base import ChatResponse
 
 logger = logging.getLogger(__name__)
 

@@ -3,7 +3,6 @@
 import pytest
 from engines.base import EngineError, EngineTimeoutError, EngineRateLimitError
 from engines.engine_manager import EngineManager
-from tests.conftest import MockEngine
 
 
 class TestEngineManagerBasic:

@@ -9,7 +9,6 @@ import logging
 from enum import Enum
 from dataclasses import dataclass, field
 from typing import Dict, List, Optional, Set, Tuple
-from collections import defaultdict
 
 logger = logging.getLogger(__name__)
 

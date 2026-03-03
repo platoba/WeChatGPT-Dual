@@ -1,7 +1,5 @@
 """Tests for WeChatMessage model"""
 
-import time
-import pytest
 from wechat.message import WeChatMessage, MessageType
 
 

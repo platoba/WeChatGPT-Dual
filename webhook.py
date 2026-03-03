@@ -6,11 +6,9 @@ Provides /webhook/wechat endpoint + /health + /stats
 import os
 import time
 import logging
-import hashlib
-import hmac
-from typing import Optional, Dict, Any
+from typing import Optional
 
-from fastapi import FastAPI, Request, Response, HTTPException, Header
+from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 

@@ -1,9 +1,8 @@
 """Tests for cost_tracker module."""
 import os
-import time
 import pytest
 import tempfile
-from services.cost_tracker import CostTracker, UsageRecord, BudgetStatus, CostReport, MODEL_PRICING
+from services.cost_tracker import CostTracker, MODEL_PRICING
 
 
 @pytest.fixture

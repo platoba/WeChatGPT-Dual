@@ -11,7 +11,6 @@ Features:
 
 import os
 import json
-import time
 import sqlite3
 import hashlib
 import logging
@@ -183,12 +182,12 @@ class BackupService:
 
         lines = [
             f"# Conversation Backup — {backup_id}",
-            f"",
+            "",
             f"Generated: {datetime.now().isoformat()}",
             f"Total messages: {len(messages)}",
-            f"",
-            f"---",
-            f"",
+            "",
+            "---",
+            "",
         ]
 
         current_date = ""
@@ -256,7 +255,7 @@ class BackupService:
             ".content{white-space:pre-wrap}",
             "h1{color:#333}h2{color:#555;border-bottom:1px solid #ddd;padding-bottom:5px}",
             "</style></head><body>",
-            f"<h1>💬 Conversation Backup</h1>",
+            "<h1>💬 Conversation Backup</h1>",
             f"<p>ID: {backup_id} | Messages: {len(messages)} | Generated: {datetime.now().isoformat()}</p>",
         ]
 

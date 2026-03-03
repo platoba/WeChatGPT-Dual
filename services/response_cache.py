@@ -14,7 +14,7 @@ import math
 import sqlite3
 import hashlib
 import logging
-from typing import Optional, Dict, List, Tuple
+from typing import Optional, Dict
 from dataclasses import dataclass
 from contextlib import contextmanager
 from collections import Counter

@@ -3,7 +3,7 @@ import os
 import time
 import pytest
 import tempfile
-from services.content_safety import ContentSafety, ModerationResult, Action, Category
+from services.content_safety import ContentSafety, ModerationResult
 
 
 @pytest.fixture

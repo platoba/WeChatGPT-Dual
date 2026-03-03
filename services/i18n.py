@@ -3,12 +3,10 @@
 支持: zh/en/ja/ko + 动态语言检测 + 用户偏好
 """
 
-import os
 import json
-import re
 import logging
-from typing import Dict, Optional, List, Any
-from dataclasses import dataclass, field
+from typing import Dict, Optional, List
+from dataclasses import dataclass
 
 logger = logging.getLogger(__name__)
 

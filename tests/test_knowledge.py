@@ -1,9 +1,6 @@
 """Tests for KnowledgeStore (TF-IDF RAG)"""
 
-import os
-import json
-import pytest
-from knowledge.store import KnowledgeStore, Document
+from knowledge.store import KnowledgeStore
 
 
 class TestKnowledgeStoreBasic:

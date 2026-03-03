@@ -1,9 +1,8 @@
 """Tests for Database layer"""
 
-import os
 import time
 import pytest
-from database import Database, UserRecord
+from database import Database
 
 
 @pytest.fixture

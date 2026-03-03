@@ -17,7 +17,7 @@ import json
 import time
 import sqlite3
 import logging
-from typing import Dict, List, Optional, Any, Tuple
+from typing import Dict, List, Optional, Any
 from dataclasses import dataclass, field, asdict
 from contextlib import contextmanager
 from enum import Enum

@@ -7,7 +7,7 @@ import time
 import sqlite3
 import json
 import logging
-from typing import List, Dict, Optional, Any
+from typing import List, Dict, Optional
 from dataclasses import dataclass
 from contextlib import contextmanager
 

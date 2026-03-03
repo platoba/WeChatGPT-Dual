@@ -6,7 +6,6 @@ import os
 import time
 import threading
 import pytest
-from unittest.mock import MagicMock
 
 from services.api_gateway import (
     ApiGateway, ApiKeyStore, ApiKey, ApiResponse,
@@ -690,7 +689,7 @@ class TestApiGateway:
     def test_hmac_verify(self):
         secret = "my_secret"
         payload = '{"msg":"hello"}'
-        import hmac as hmac_mod, hashlib
+        import hmac as hmac_mod
         sig = hmac_mod.new(secret.encode(), payload.encode(), "sha256").hexdigest()
         assert ApiGateway.verify_hmac(secret, payload, sig)
         assert not ApiGateway.verify_hmac(secret, payload, "invalid_sig")

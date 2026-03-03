@@ -2,12 +2,7 @@
 tests/test_ab_testing.py - A/B 测试服务测试
 """
 
-import os
-import time
-import math
 import pytest
-import threading
-from unittest.mock import MagicMock
 
 from services.ab_testing import (
     ABTestService, ABTestStore,

@@ -5,11 +5,10 @@
 import os
 import sys
 import time
-import pytest
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from middleware import RateLimiter, TokenBucket, RateLimitResult
+from middleware import RateLimiter, TokenBucket
 
 
 class TestTokenBucket:

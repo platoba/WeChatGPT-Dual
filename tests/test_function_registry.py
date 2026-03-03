@@ -1,13 +1,10 @@
 """Tests for FunctionRegistry."""
 
 import json
-import time
-import asyncio
 import pytest
 
 from services.function_registry import (
-    FunctionRegistry, FunctionDef, FunctionParam, ParamType,
-    FunctionCallError, RateLimitError, ValidationError,
+    FunctionRegistry, FunctionParam, FunctionCallError, RateLimitError, ValidationError,
 )
 
 

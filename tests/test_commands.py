@@ -1,7 +1,5 @@
 """Tests for CommandHandler"""
 
-import pytest
-from commands.handler import CommandHandler
 
 
 class TestCommandRouting:

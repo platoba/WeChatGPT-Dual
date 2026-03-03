@@ -1,10 +1,9 @@
 """Tests for NotificationService (alert engine)."""
 import os
-import time
 import pytest
 import tempfile
 from services.notification_service import (
-    NotificationService, Severity, Condition, AlertRule, Alert,
+    NotificationService, Severity, Condition,
 )
 
 

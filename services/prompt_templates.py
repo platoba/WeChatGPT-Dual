@@ -15,7 +15,7 @@ import re
 import time
 import sqlite3
 import logging
-from typing import Dict, List, Optional, Any
+from typing import Dict, List, Optional
 from dataclasses import dataclass, field, asdict
 from contextlib import contextmanager
 

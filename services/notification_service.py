@@ -19,7 +19,6 @@ import hashlib
 import logging
 from typing import Dict, List, Optional, Any, Callable
 from dataclasses import dataclass, field
-from collections import defaultdict
 from contextlib import contextmanager
 from enum import Enum
 
@@ -487,7 +486,7 @@ class NotificationService:
                 lines.append(f"  • [{a.severity}] {a.message} (age: {age_str})")
 
         if recent:
-            lines.append(f"\nRecent History:")
+            lines.append("\nRecent History:")
             for a in recent[:5]:
                 status_icon = {'active': '🔴', 'resolved': '✅', 'acknowledged': '👁️'}.get(a.status, '❓')
                 lines.append(f"  {status_icon} {a.message}")

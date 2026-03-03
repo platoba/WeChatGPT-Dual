@@ -4,7 +4,6 @@
 """
 
 import logging
-import time
 from typing import Optional, Callable
 
 from wechat.message import WeChatMessage, MessageType

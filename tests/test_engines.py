@@ -3,7 +3,7 @@
 import time
 import pytest
 from engines.base import (
-    BaseEngine, ChatResponse, EngineStats,
+    ChatResponse, EngineStats,
     EngineError, EngineTimeoutError, EngineRateLimitError,
 )
 

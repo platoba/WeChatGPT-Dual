@@ -1,7 +1,6 @@
 """Tests for services/token_budget.py"""
 
 import os
-import time
 import pytest
 import tempfile
 from services.token_budget import TokenBudgetManager, BudgetStatus, UsageReport

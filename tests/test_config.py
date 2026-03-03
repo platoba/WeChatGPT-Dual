@@ -1,7 +1,5 @@
 """Tests for Config module"""
 
-import os
-import pytest
 from config import Config, OpenAIConfig, ClaudeConfig, ContextConfig, KnowledgeConfig
 
 

@@ -2,18 +2,13 @@
 tests/test_scheduled_message.py - 定时消息服务测试
 """
 
-import os
 import time
-import json
 import pytest
-import tempfile
-import threading
-from datetime import datetime, timedelta
-from unittest.mock import MagicMock, patch
+from datetime import datetime
 
 from services.scheduled_message import (
     ScheduledMessageService, ScheduleStore, ScheduledMessage,
-    CronParser, ScheduleType, MessageStatus, RepeatPolicy,
+    CronParser, ScheduleType, MessageStatus,
 )
 
 

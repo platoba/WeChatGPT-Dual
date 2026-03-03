@@ -13,10 +13,10 @@ Features:
 import time
 import sqlite3
 import logging
-from typing import Optional, Dict, List, Tuple
+from typing import Dict, List
 from dataclasses import dataclass
 from contextlib import contextmanager
-from datetime import datetime, date
+from datetime import date
 
 logger = logging.getLogger(__name__)
 

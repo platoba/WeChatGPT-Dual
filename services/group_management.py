@@ -18,11 +18,9 @@ import time
 import sqlite3
 import hashlib
 import logging
-import re
-from typing import Dict, List, Optional, Any, Tuple
+from typing import Dict, List, Optional, Any
 from dataclasses import dataclass, field
 from contextlib import contextmanager
-from collections import defaultdict
 
 logger = logging.getLogger(__name__)
 

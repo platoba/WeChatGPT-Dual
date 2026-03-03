@@ -1,6 +1,5 @@
 """Tests for WeChatHandler"""
 
-import pytest
 from wechat.message import WeChatMessage, MessageType
 from wechat.handler import WeChatHandler
 

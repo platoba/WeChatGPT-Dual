@@ -1,12 +1,10 @@
 """Tests for services/auto_moderation.py"""
 
-import time
 import pytest
 
 from services.auto_moderation import (
     AutoModerator, ContentFilter, FloodDetector,
-    FilterAction, ViolationType, ModerationResult,
-    UserModerationState,
+    FilterAction, ViolationType, UserModerationState,
 )
 
 

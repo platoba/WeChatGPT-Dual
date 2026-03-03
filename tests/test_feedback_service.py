@@ -1,13 +1,10 @@
 """Tests for FeedbackService."""
 
-import os
-import time
 import json
 import pytest
-import tempfile
 
 from services.feedback_service import (
-    FeedbackService, FeedbackEntry, QualityMetrics, RatingType,
+    FeedbackService, FeedbackEntry,
 )
 
 

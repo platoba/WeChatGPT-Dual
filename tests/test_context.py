@@ -1,7 +1,6 @@
 """Tests for ContextManager"""
 
-import pytest
-from context.manager import ContextManager, ConversationContext
+from context.manager import ContextManager
 
 
 class TestContextManagerBasic:

@@ -1,12 +1,9 @@
 """Tests for ConversationThreading."""
 
-import json
-import time
 import pytest
 
 from services.conversation_threading import (
-    ConversationThreading, ConversationThread, ThreadMessage,
-    ThreadContext, ThreadState,
+    ConversationThreading,
 )
 
 

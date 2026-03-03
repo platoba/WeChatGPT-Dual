@@ -20,8 +20,7 @@ import sqlite3
 import threading
 from enum import Enum
 from dataclasses import dataclass, field
-from typing import Dict, List, Optional, Any, Tuple
-from pathlib import Path
+from typing import Dict, List, Optional, Any
 
 logger = logging.getLogger(__name__)
 

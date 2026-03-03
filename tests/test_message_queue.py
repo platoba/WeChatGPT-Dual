@@ -3,7 +3,6 @@
 import time
 import threading
 import pytest
-from unittest.mock import MagicMock, patch
 
 from services.message_queue import (
     MessageQueue, DeadLetterQueue, QueueMessage,

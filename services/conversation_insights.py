@@ -12,14 +12,13 @@ Features:
 """
 
 import json
-import math
 import re
 import time
 import sqlite3
 import logging
-from typing import Dict, List, Optional, Any, Tuple
+from typing import Dict, List, Optional, Any
 from dataclasses import dataclass, field
-from collections import Counter, defaultdict
+from collections import Counter
 from contextlib import contextmanager
 
 logger = logging.getLogger(__name__)

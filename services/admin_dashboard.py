@@ -14,8 +14,7 @@ Features:
 import time
 import hashlib
 import logging
-import functools
-from typing import Optional, Dict, List, Any, Callable
+from typing import Optional, Dict, List, Any
 from dataclasses import dataclass, field
 
 logger = logging.getLogger(__name__)

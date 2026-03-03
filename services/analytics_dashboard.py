@@ -7,7 +7,7 @@ import json
 import csv
 import io
 import logging
-from typing import Dict, List, Optional, Any, Tuple
+from typing import Dict, List, Optional, Any
 from dataclasses import dataclass, field
 from collections import defaultdict, Counter
 from datetime import datetime

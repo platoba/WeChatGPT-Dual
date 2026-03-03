@@ -2,7 +2,7 @@
 摘要器 - 自动摘要长对话以控制上下文长度
 """
 
-from typing import List, Dict, Optional
+from typing import List, Dict
 
 
 class Summarizer:

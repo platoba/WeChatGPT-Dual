@@ -1,6 +1,5 @@
 """Tests for telegram/handler.py"""
 
-import pytest
 from telegram.handler import (
     TelegramUser, InlineButton, InlineKeyboard, InlineKeyboardBuilder,
     MessageFormatter, UserRateLimiter, CallbackQuery, TelegramHandler,

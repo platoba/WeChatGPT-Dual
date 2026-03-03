@@ -4,11 +4,9 @@ tests/test_voice_message.py - 语音消息服务测试
 
 import os
 import time
-import json
 import pytest
-import tempfile
 import threading
-from unittest.mock import patch, MagicMock
+from unittest.mock import patch
 
 from services.voice_message import (
     VoiceMessageService, VoiceConfig, VoiceCache,

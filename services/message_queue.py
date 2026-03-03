@@ -8,7 +8,6 @@ import heapq
 import threading
 import logging
 import sqlite3
-import os
 from enum import IntEnum
 from dataclasses import dataclass, field
 from typing import Optional, Callable, Dict, List, Any

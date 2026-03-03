@@ -19,7 +19,7 @@ import sqlite3
 import csv
 import io
 import logging
-from typing import Dict, List, Optional, Any, Tuple
+from typing import Dict, List, Optional, Any
 from dataclasses import dataclass, field, asdict
 from contextlib import contextmanager
 from enum import Enum

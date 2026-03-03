@@ -1,10 +1,9 @@
 """Tests for services/usage_quota.py"""
 
 import os
-import time
 import pytest
 import tempfile
-from services.usage_quota import UsageQuota, QuotaStatus, TIERS
+from services.usage_quota import UsageQuota
 
 
 @pytest.fixture

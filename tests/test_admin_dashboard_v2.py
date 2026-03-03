@@ -1,9 +1,8 @@
 """Tests for Admin Dashboard API"""
 
 import time
-import json
 import pytest
-from unittest.mock import MagicMock, patch
+from unittest.mock import MagicMock
 from dataclasses import dataclass
 
 from services.admin_dashboard import (

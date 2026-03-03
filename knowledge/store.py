@@ -6,7 +6,6 @@
 import os
 import json
 import math
-import re
 from collections import Counter, defaultdict
 from typing import List, Dict, Tuple, Optional
 from dataclasses import dataclass, field

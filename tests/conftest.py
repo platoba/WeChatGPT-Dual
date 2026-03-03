@@ -4,23 +4,16 @@ Shared fixtures for WeChatGPT-Dual test suite
 
 import os
 import sys
-import time
 import pytest
-import tempfile
-import shutil
 
 # Ensure project root is importable
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from config import Config, OpenAIConfig, ClaudeConfig, ContextConfig, KnowledgeConfig
-from engines.base import BaseEngine, ChatResponse, EngineStats, EngineError
-from engines.openai_engine import OpenAIEngine
-from engines.claude_engine import ClaudeEngine
+from config import Config
+from engines.base import BaseEngine, ChatResponse, EngineError
 from engines.engine_manager import EngineManager
 from context.manager import ContextManager
-from context.summarizer import Summarizer
 from knowledge.store import KnowledgeStore
-from knowledge.loader import DocumentLoader
 from commands.handler import CommandHandler
 from wechat.message import WeChatMessage, MessageType
 from wechat.handler import WeChatHandler

@@ -15,7 +15,7 @@ import hmac
 import hashlib
 import logging
 import threading
-from typing import Optional, Dict, List, Set, Tuple
+from typing import Dict, List, Set, Tuple
 from dataclasses import dataclass, field
 from collections import defaultdict
 

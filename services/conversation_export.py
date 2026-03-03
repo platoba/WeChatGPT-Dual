@@ -16,9 +16,9 @@ import time
 import logging
 import io
 import html as html_lib
-from typing import List, Dict, Optional, Any
+from typing import List, Dict, Optional
 from dataclasses import dataclass
-from datetime import datetime, timezone
+from datetime import datetime
 from enum import Enum
 
 logger = logging.getLogger(__name__)

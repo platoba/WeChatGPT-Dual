@@ -1,6 +1,5 @@
 """Tests for Summarizer"""
 
-import pytest
 from context.summarizer import Summarizer
 from tests.conftest import MockEngine
 

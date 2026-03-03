@@ -1,6 +1,5 @@
 """Tests for DocumentLoader"""
 
-import os
 import json
 import pytest
 from knowledge.loader import DocumentLoader

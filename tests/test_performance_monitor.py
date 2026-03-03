@@ -4,7 +4,6 @@ import pytest
 import threading
 from services.performance_monitor import (
     PerformanceMonitor, ReservoirSampler, SlidingWindowCounter,
-    LatencyStats, EndpointMetrics, SystemMetrics,
 )
 
 

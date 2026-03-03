@@ -11,14 +11,13 @@ Features:
 - CSV/JSON export
 """
 
-import json
 import time
 import sqlite3
 import logging
-from typing import Dict, List, Optional, Any, Tuple
+from typing import Dict, List, Any, Tuple
 from dataclasses import dataclass, field
 from contextlib import contextmanager
-from datetime import datetime, timedelta
+from datetime import datetime
 
 logger = logging.getLogger(__name__)
 

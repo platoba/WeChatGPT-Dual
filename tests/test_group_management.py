@@ -1,10 +1,9 @@
 """Tests for group_management module."""
 import os
 import time
-import json
 import pytest
 import tempfile
-from services.group_management import GroupManager, GroupInfo, MemberInfo, TopicInfo, FloodCheckResult
+from services.group_management import GroupManager
 
 
 @pytest.fixture

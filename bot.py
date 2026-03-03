@@ -9,12 +9,10 @@ WeChatGPT-Dual v2.0
 - 管理命令: /status /switch /clear /usage /help
 """
 
-import os
 import sys
 import time
 import logging
 import requests
-from collections import defaultdict
 
 from config import Config
 from engines.openai_engine import OpenAIEngine
@@ -233,7 +231,7 @@ class TelegramBot:
     def run(self):
         """启动Bot"""
         print(f"\n{'='*55}")
-        print(f"  WeChatGPT Dual v2.0")
+        print("  WeChatGPT Dual v2.0")
         print(f"  Primary: {self.engine_manager.primary_name} ({self.engine_manager.primary.model})")
         print(f"  Secondary: {self.engine_manager.secondary_name} ({self.engine_manager.secondary.model})")
         print(f"  Failover: {'enabled' if self.config.failover_enabled else 'disabled'}")

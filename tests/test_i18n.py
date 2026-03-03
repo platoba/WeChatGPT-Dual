@@ -3,7 +3,7 @@
 import json
 import pytest
 from services.i18n import (
-    I18n, LanguageDetector, Locale, TRANSLATIONS, LOCALES,
+    I18n, LanguageDetector, TRANSLATIONS, LOCALES,
 )
 
 
