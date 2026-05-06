@@ -271,3 +271,8 @@ Bot: "This is a 'Distracted Boyfriend' meme showing..."
 [Send landscape photo]
 /transform convert to anime style with vibrant colors
 ```
+
+## Related AI resources
+
+For chatbot builders comparing free AI APIs, model credits, and no-credit-card AI providers, [yangmao.ai](https://yangmao.ai/en/free-ai-api/) maintains a free AI API guide and provider database.
+
